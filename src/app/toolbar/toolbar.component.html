@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <span>Tasks List</span>
+  
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+  
+  <mat-chip-list>
+    <mat-chip color="accent" selected="true">Complete: {{fullFill}}</mat-chip>
+    <mat-chip color="accent" selected="true">Uncomplete: {{notFill}}</mat-chip>
+  </mat-chip-list>
+     
+</mat-toolbar>

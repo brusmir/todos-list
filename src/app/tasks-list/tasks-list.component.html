@@ -1,0 +1,25 @@
+<div id="list">
+  <mat-card>Todos List</mat-card>  
+
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let todo of todos">
+      {{todo?.todoName}}
+      <span class="example-fill-remaining-space"></span>
+      <mat-checkbox class="example-margin" [(ngModel)]="todo.complete" (change)="updateTodo(todo.todoName)" ></mat-checkbox>
+    </mat-list-item>    
+  </mat-list>
+
+  <form class="example-form" [formGroup]="userForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="New Todo Item"  formControlName="name" id="userInput">
+      <mat-error *ngIf="userForm.controls.name.errors?.required">
+        This field is required!
+      </mat-error>
+    </mat-form-field>    
+    
+    <button mat-icon-button color="primary" class="posRight" (click)="saveTodo()" [disabled]="userForm.invalid"><mat-icon>add</mat-icon></button>
+
+  </form>    
+</div>
+  
+ 

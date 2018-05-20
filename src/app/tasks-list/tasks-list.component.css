@@ -1,0 +1,21 @@
+#list {
+  width: 50%;
+  margin: auto;
+}
+  
+.posRight {
+  position: absolute;
+  right: 6px;
+}
+  
+form {
+  position: relative;
+  margin-top: 3em; 
+  padding: 0 16px;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+  Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
